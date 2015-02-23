@@ -1,0 +1,13 @@
+{
+  "name": "No Autoplay",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Stops YouTube HTML5 videos from autplaying when loaded in the background.",
+  "author": "Kyle Lacy",
+  "content_scripts": [{
+    "matches": ["http://youtube.com/*", "http://www.youtube.com/*", "https://youtube.com/*", "https://www.youtube.com/*"],
+    "js": ["no-autoplay.js"],
+    "run_at": "document_end"
+  }],
+  "minimum_chrome_version": "40"
+}
